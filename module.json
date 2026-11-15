@@ -1,0 +1,11 @@
+{
+  "id": "{2D0C48E8-68FD-4F8D-AD84-FA0DCC624B8D}",
+  "name": "Eiswarnung",
+  "type": 3,
+  "vendor": "Eiswarnung.de",
+  "aliases": ["Eiswarnung REST API"],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "Eiswarnung"
+}
