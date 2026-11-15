@@ -16,7 +16,7 @@ IP-Symcon-Modul zur Abfrage der REST-API von [Eiswarnung.de](https://www.eiswarn
 
 ## Installation
 
-1. Repository `Eiswarner` als Modul-Repository in der IP-Symcon-Modulverwaltung hinzufügen.
+1. `https://github.com/gogo2001-2002/Eiswarner` als Modul-Repository in der IP-Symcon-Modulverwaltung hinzufügen.
 2. Modulinstallation aktualisieren und eine Instanz **Eiswarnung** erstellen.
 3. In der Instanzkonfiguration den API-Key und die Koordinaten des gewünschten Standorts eintragen.
 4. **Jetzt aktualisieren** in der Konfiguration anklicken oder die Variable **Jetzt aktualisieren** schalten.
