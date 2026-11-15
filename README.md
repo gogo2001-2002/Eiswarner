@@ -6,6 +6,10 @@ IP-Symcon-Modul zur Abfrage der REST-API von [Eiswarnung.de](https://www.eiswarn
 **API:** <https://api.eiswarnung.de/>  
 **Dokumentation des Anbieters:** <https://www.eiswarnung.de/rest-api/>
 
+## Repository-Aufbau
+
+`library.json` liegt im Stammverzeichnis des Repositories. Die Moduldateien liegen im Unterordner `Eiswarnung/`; dessen Name entspricht der PHP-Klasse `Eiswarnung`.
+
 ## Funktionen
 
 - Eisprognose als Wert 0 (kein Eis), 1 (Eis) oder 2 (eventuell Eis)
