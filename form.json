@@ -1,0 +1,13 @@
+{
+  "elements": [
+    { "type": "ValidationTextBox", "name": "APIKey", "caption": "API-Key (32 Zeichen)" },
+    { "type": "NumberSpinner", "name": "Latitude", "caption": "Breitengrad", "digits": 6, "minimum": -90, "maximum": 90 },
+    { "type": "NumberSpinner", "name": "Longitude", "caption": "Längengrad", "digits": 6, "minimum": -180, "maximum": 180 },
+    { "type": "CheckBox", "name": "AutoUpdate", "caption": "Automatische Aktualisierung aktiv" },
+    { "type": "NumberSpinner", "name": "UpdateInterval", "caption": "Intervall in Stunden", "minimum": 1, "maximum": 24 },
+    { "type": "Label", "caption": "Die kostenlose API erlaubt bis zu 50 Abfragen pro Tag. Für eine Morgenprognose empfiehlt der Anbieter eine Abfrage 8–10 Stunden vorher." },
+    { "type": "Button", "caption": "Jetzt aktualisieren", "onClick": "Eiswarnung_Update($id);" }
+  ],
+  "actions": [],
+  "status": []
+}
