@@ -14,7 +14,7 @@ class Eiswarnung extends IPSModule
         $this->RegisterPropertyFloat('Longitude', 0.0);
         $this->RegisterPropertyBoolean('AutoUpdate', true);
         $this->RegisterPropertyInteger('UpdateInterval', 12);
-        $this->RegisterTimer('UpdateTimer', 0, 'Eiswarnung_Update($_IPS[\'TARGET\']);');
+        $this->RegisterTimer('UpdateTimer', 0, 'Eiswarnung_UpdateForecast($_IPS[\'TARGET\']);');
 
         $this->RegisterIntegerProfile(self::PROFILE_FORECAST, 'WeatherCloudy', 0, 2, 1);
         IPS_SetVariableProfileAssociation(self::PROFILE_FORECAST, 0, 'Kein Eis', 'Sun', 0x35A853);
