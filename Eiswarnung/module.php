@@ -16,7 +16,7 @@ class Eiswarnung extends IPSModule
         $this->RegisterPropertyInteger('UpdateInterval', 12);
         $this->RegisterTimer('UpdateTimer', 0, 'Eiswarnung_Update($_IPS[\'TARGET\']);');
 
-        $this->RegisterProfileInteger(self::PROFILE_FORECAST, 'WeatherCloudy', '', '', 0, 2, 1);
+        $this->RegisterIntegerProfile(self::PROFILE_FORECAST, 'WeatherCloudy', 0, 2, 1);
         IPS_SetVariableProfileAssociation(self::PROFILE_FORECAST, 0, 'Kein Eis', 'Sun', 0x35A853);
         IPS_SetVariableProfileAssociation(self::PROFILE_FORECAST, 1, 'Eis', 'Snow', 0xD64545);
         IPS_SetVariableProfileAssociation(self::PROFILE_FORECAST, 2, 'Eventuell Eis', 'Cloud', 0xE6A700);
@@ -142,6 +142,23 @@ class Eiswarnung extends IPSModule
     {
         SetValue($this->GetIDForIdent('Success'), $success);
         SetValue($this->GetIDForIdent('Status'), $message);
+    }
+
+    private function RegisterIntegerProfile(string $name, string $icon, int $min, int $max, int $step)
+    {
+        if (!IPS_VariableProfileExists($name)) {
+            IPS_CreateVariableProfile($name, VARIABLETYPE_INTEGER);
+        }
+
+        $profile = IPS_GetVariableProfile($name);
+        if ($profile['ProfileType'] !== VARIABLETYPE_INTEGER) {
+            throw new RuntimeException('Das Variablenprofil ' . $name . ' hat nicht den Typ Integer.');
+        }
+
+        IPS_SetVariableProfileIcon($name, $icon);
+        IPS_SetVariableProfileText($name, '', '');
+        IPS_SetVariableProfileValues($name, $min, $max, $step);
+        IPS_SetVariableProfileDigits($name, 0);
     }
 }
 
