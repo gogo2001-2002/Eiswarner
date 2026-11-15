@@ -161,12 +161,3 @@ class Eiswarnung extends IPSModule
         IPS_SetVariableProfileDigits($name, 0);
     }
 }
-
-function Eiswarnung_Update($InstanceID)
-{
-    $instance = IPS_GetInstance($InstanceID);
-    if ($instance['ModuleInfo']['ModuleID'] !== '{2D0C48E8-68FD-4F8D-AD84-FA0DCC624B8D}') {
-        return;
-    }
-    IPS_RequestAction($InstanceID, 'UpdateNow', true);
-}
